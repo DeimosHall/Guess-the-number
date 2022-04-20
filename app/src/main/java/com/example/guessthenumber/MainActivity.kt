@@ -2,36 +2,45 @@ package com.example.guessthenumber
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import kotlin.random.Random
+import android.os.Handler
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.coroutines.delay
+import java.util.*
+import kotlin.concurrent.schedule
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val randomNumber = Random.nextInt(0,100)
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        val userFragment = UserFragment()
+        val aiFragment = AIFragment()
 
-        val etNumber = findViewById<EditText>(R.id.etNumber)
-        val btnCheck = findViewById<Button>(R.id.btnCheck)
-        val tvFinalMessage = findViewById<TextView>(R.id.tvFinalMessage)
-
-        fun numFound() = "Congratulations, you found the number ${randomNumber}".also { tvFinalMessage.text = it }
-
-        fun smallerNum() = "Try a smaller one".also { tvFinalMessage.text = it }
-
-        fun biggerNum() = "Try a bigger one".also { tvFinalMessage.text = it }
-
-        btnCheck.setOnClickListener {
-            val number = etNumber.text.toString().toInt()
-
-            when {
-                number == randomNumber -> numFound()
-                number > randomNumber -> smallerNum()
-                number < randomNumber -> biggerNum()
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when(item.itemId) {
+                R.id.page_1 -> {
+                    replaceFragment(userFragment)
+                    true
+                }
+                R.id.page_2 -> {
+                    replaceFragment(aiFragment)
+                    true
+                }
+                else -> false
             }
+        }
+    }
+    // Changes the fragment in the main activity
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.commit {
+            replace(R.id.fragmentContainer,fragment)
+            setReorderingAllowed(true)
+            addToBackStack(null)
         }
     }
 }

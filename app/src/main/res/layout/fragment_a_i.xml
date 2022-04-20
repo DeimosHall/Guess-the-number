@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".AIFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter a number"
+        android:textSize="20sp"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/etNumberForMachine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Number"
+        android:textSize="20sp"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/btnCheckUserNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvNumberFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Your number is"
+        android:textSize="20sp"
+        android:gravity="center" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
