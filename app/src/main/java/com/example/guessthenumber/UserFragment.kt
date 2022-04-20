@@ -10,6 +10,8 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
+import java.lang.Exception
 import kotlin.random.Random
 
 // TODO: Rename parameter arguments, choose names that match
@@ -62,15 +64,21 @@ class UserFragment : Fragment() {
         fun biggerNum() = "Try a bigger one".also { tvFinalMessage.text = it }
 
         btnCheck.setOnClickListener {
-            val number = etNumber.text.toString().toInt()
+            var number: Int
 
-            when {
-                number == randomNumber -> {
-                    numFound()
-                    it.hideKeyboard()
+            try {
+                number = etNumber.text.toString().toInt()
+
+                when {
+                    number == randomNumber -> {
+                        numFound()
+                        it.hideKeyboard()
+                    }
+                    number > randomNumber -> smallerNum()
+                    number < randomNumber -> biggerNum()
                 }
-                number > randomNumber -> smallerNum()
-                number < randomNumber -> biggerNum()
+            } catch (e: Exception) {
+                showToast()
             }
         }
 
@@ -79,6 +87,10 @@ class UserFragment : Fragment() {
             tvFinalMessage.text = ""
             etNumber.text.clear()
         }
+    }
+
+    private fun showToast() {
+        Toast.makeText(activity,"Enter a number",Toast.LENGTH_SHORT).show()
     }
 
     companion object {

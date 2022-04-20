@@ -11,6 +11,8 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
+import java.lang.Exception
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -51,9 +53,19 @@ class AIFragment : Fragment() {
         val tvNumberFound = view.findViewById<TextView>(R.id.tvNumberFound)
 
         btnCheckUserNum.setOnClickListener {
-            findNumber(number = etNumber.text.toString().toInt(), textView = tvNumberFound)
-            it.hideKeyboard()
+            var number: Int
+            try {
+                number = etNumber.text.toString().toInt()
+                findNumber(number = number, textView = tvNumberFound)
+                it.hideKeyboard()
+            } catch (e: Exception) {
+                showToast()
+            }
         }
+    }
+
+    private fun showToast() {
+        Toast.makeText(activity,"Enter a number", Toast.LENGTH_SHORT).show()
     }
 
     companion object {
