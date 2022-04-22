@@ -9,9 +9,5 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-        supportFragmentManager.commit {
-            replace(R.id.settingsFragmentContainer, SettingsFragment())
-            addToBackStack(null)
-        }
     }
 }
