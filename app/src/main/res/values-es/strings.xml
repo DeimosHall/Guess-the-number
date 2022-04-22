@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Adivina el número</string>
+    <!-- Bottom navigation view -->
+    <string name="user_guesses">Usuario adivina</string>
+    <string name="machine_guesses">Máquina adivina</string>
+
+    <!-- Overflow menu -->
+    <string name="settings">Ajustes</string>
+    <string name="about">Acerca de</string>
+
+    <!-- Arrayes -->
+    <string name="spanish">Español</string>
+    <string name="english">Inglés</string>
+    <string name="one_by_one">Uno por uno</string>
+    <string name="one_by_one_reverse">Uno por uno al revés</string>
+    <string name="middle_number_search">Búsqueda por número medio</string>
+
+    <!-- Preferences -->
+    <string name="general_title">General</string>
+    <string name="language_title">Idioma</string>
+    <string name="language_summary">Elige tu idioma</string>
+
+    <string name="lower_limit_title">Límite inferior</string>
+    <string name="lower_limit_summary">Elige el límite inferior</string>
+    <string name="upper_limit_title">Límite superior</string>
+    <string name="upper_limit_summary">Elige el límite superior</string>
+
+    <string name="guessing_method_title">Método de adivinanza</string>
+    <string name="guessing_method_summary">Elige un método de adivinanza</string>
+
+    <!-- Fragments -->
+    <string name="tv_user_instructions">Adivina el número entre...</string>
+    <string name="tv_machine_instructions">Ingresa un número y la maquina lo adivinará</string>
+    <string name="et_number">Número</string>
+    <string name="btn_check">Probar</string>
+    <string name="btn_reset">Reiniciar</string>
+
+</resources>

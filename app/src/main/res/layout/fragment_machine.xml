@@ -7,12 +7,12 @@
     android:paddingRight="30dp"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".AIFragment">
+    tools:context=".MachineFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter a number"
+        android:text="@string/tv_machine_instructions"
         android:textSize="20sp"
         android:gravity="center" />
 
@@ -20,7 +20,7 @@
         android:id="@+id/etNumberForMachine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Number"
+        android:hint="@string/et_number"
         android:textSize="20sp"
         android:inputType="number"/>
 
@@ -28,7 +28,7 @@
         android:id="@+id/btnCheckUserNum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Check"
+        android:text="@string/btn_check"
         android:textSize="20sp" />
 
     <TextView

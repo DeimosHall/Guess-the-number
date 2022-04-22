@@ -1,5 +1,37 @@
 <resources>
     <string name="app_name">Guess the number</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Bottom navigation view -->
+    <string name="user_guesses">User guesses</string>
+    <string name="machine_guesses">Machine guesses</string>
+
+    <!-- Overflow menu -->
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+
+    <!-- Arrayes -->
+    <string name="spanish">Spanish</string>
+    <string name="english">English</string>
+    <string name="one_by_one">One by one</string>
+    <string name="one_by_one_reverse">One by one reverse</string>
+    <string name="middle_number_search">Middle number search</string>
+
+    <!-- Preferences -->
+    <string name="general_title">General</string>
+    <string name="language_title">Language</string>
+    <string name="language_summary">Choose your language</string>
+
+    <string name="lower_limit_title">Lower limit</string>
+    <string name="lower_limit_summary">Choose lower limit</string>
+    <string name="upper_limit_title">Upper limit</string>
+    <string name="upper_limit_summary">Choose upper limit</string>
+
+    <string name="guessing_method_title">Guessing method</string>
+    <string name="guessing_method_summary">Choose a guessing method</string>
+
+    <!-- Fragments -->
+    <string name="tv_user_instructions">Guess the number between...</string>
+    <string name="tv_machine_instructions">Enter a number and machine will guess it</string>
+    <string name="et_number">Number</string>
+    <string name="btn_check">Check</string>
+    <string name="btn_reset">Reset</string>
 </resources>

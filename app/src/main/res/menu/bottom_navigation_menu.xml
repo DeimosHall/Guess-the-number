@@ -4,11 +4,11 @@
         android:id="@+id/page_1"
         android:enabled="true"
         android:icon="@drawable/thinking"
-        android:title="User guess" />
+        android:title="@string/user_guesses" />
 
     <item
         android:id="@+id/page_2"
         android:enabled="true"
         android:icon="@drawable/android"
-        android:title="Machine guess" />
+        android:title="@string/machine_guesses" />
 </menu>

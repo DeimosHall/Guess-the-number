@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="@string/general_title">
+
+        <ListPreference
+            android:key="language"
+            android:title="@string/language_title"
+            android:summary="@string/language_summary"
+            android:defaultValue="@string/spanish"
+            android:entries="@array/Language"
+            android:entryValues="@array/Language" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/user_guesses">
+
+        <EditTextPreference
+            android:key="lower_limit"
+            android:title="@string/lower_limit_title"
+            android:defaultValue="0"
+            android:summary="@string/lower_limit_summary" />
+
+        <EditTextPreference
+            android:key="upper_limit"
+            android:title="@string/upper_limit_title"
+            android:defaultValue="100"
+            android:summary="@string/upper_limit_summary" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/machine_guesses">
+
+        <ListPreference
+            android:key="guessing_method"
+            android:title="@string/guessing_method_title"
+            android:summary="@string/guessing_method_summary"
+            android:defaultValue="@string/one_by_one"
+            android:entries="@array/AI_guessing_method"
+            android:entryValues="@array/AI_guessing_method" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="Language">
+        <item>@string/spanish</item>
+        <item>@string/english</item>
+    </array>
+
+    <array name="AI_guessing_method">
+        <item>@string/one_by_one</item>
+        <item>@string/one_by_one_reverse</item>
+        <item>@string/middle_number_search</item>
+    </array>
+
+</resources>
